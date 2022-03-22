@@ -14,16 +14,16 @@ class HomepageNav(SeleniumBase):
         self.NAV_LINK_TEXT = 'Own Your Style,Women,Men,Beauty,Home,Furniture,Kids,Toys,Shoes,Jewelry,Handbags,Sale,Gifts'
 
     def get_nav_links(self) -> List[WebElement]:
-        '''Return WebElements for nav links'''
+        """Return WebElements for nav links"""
         return self.are_visible('css', self.__nav_links, 'Header Navigation Links')
 
     def get_nav_links_text(self) -> str:
-        '''Return all nav links text. Return format is a String with comma separated values'''
+        """Return all nav links text. Return format is a String with comma separated values"""
         nav_links = self.get_nav_links()
         nav_links_text = self.get_text_from_webelements(nav_links)
         return ','.join(nav_links_text)
 
     def get_nav_link_by_name(self, name: str) -> WebElement:
-        '''Return a nav link WebElement, the input is a link's name'''
+        """Return a nav link WebElement, the input is a link's name"""
         elements = self.get_nav_links()
         return self.get_element_by_text(elements, name)

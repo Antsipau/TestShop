@@ -8,7 +8,7 @@ class TestHomepage:
 
     def test_nav_links(self):
         homepage_nav = HomepageNav(self.driver)
-        for index in range(12):
+        for index in range(13):
             homepage_nav.get_nav_links()[index].click()
 
         actual_links = homepage_nav.get_nav_links_text()
