@@ -11,7 +11,7 @@ class HomepageNav(SeleniumBase):
         super().__init__(driver)
         self.driver = driver
         self.__nav_links: str = '#mainNavigationFobs>li'
-        self.NAV_LINK_TEXT = 'Gifts,Women,Men,Kids & Baby,Beauty,Home,Furniture,Shoes,Jewelry,Handbags & Accessories,Now Trending,Sale'
+        self.NAV_LINK_TEXT = 'Own Your Style,Women,Men,Beauty,Home,Furniture,Kids,Toys,Shoes,Jewelry,Handbags,Sale,Gifts'
 
     def get_nav_links(self) -> List[WebElement]:
         '''Return WebElements for nav links'''
@@ -27,4 +27,3 @@ class HomepageNav(SeleniumBase):
         '''Return a nav link WebElement, the input is a link's name'''
         elements = self.get_nav_links()
         return self.get_element_by_text(elements, name)
-

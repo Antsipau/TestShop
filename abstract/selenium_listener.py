@@ -1,4 +1,3 @@
-
 from selenium.webdriver.support.events import AbstractEventListener
 
 from base.seleniumbase import SeleniumBase
